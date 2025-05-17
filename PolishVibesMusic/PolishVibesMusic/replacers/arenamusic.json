@@ -1,0 +1,19 @@
+{
+    "replacements": [
+        {
+            "matches": [
+                "*:msc arena"
+            ],
+            "sounds": [
+                {
+                    "sound": "desolate_arena.ogg",
+                    "weight": 1
+                },
+                {
+                    "sound": "kumbejj_arena.ogg",
+                    "weight": 1
+                }
+            ]
+        }
+    ]
+}

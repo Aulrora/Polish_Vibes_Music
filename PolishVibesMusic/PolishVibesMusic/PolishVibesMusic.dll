@@ -1,0 +1,97 @@
+﻿using BepInEx;
+using UnityEngine;
+using System.IO;
+using System.Collections.Generic;
+
+[BepInPlugin("com.polishvibes.music", "Polish Vibes Music", "1.0.0")]
+public class PolishVibesMusic : BaseUnityPlugin
+{
+    private List<AudioClip> mainMenuClips = new List<AudioClip>();
+    private System.Random rng = new System.Random();
+    private AudioSource currentMusicSource;
+    private bool isReady = false;
+
+    private void Awake()
+    {
+        Logger.LogInfo("Polish Vibes Music mod loaded!");
+
+        // Folder sound/ obok pliku DLL
+        string pluginDir = Path.GetDirectoryName(Info.Location);
+        string soundPath = Path.Combine(pluginDir, "sound");
+
+        // Lista nazw utworów do wczytania
+        string[] musicFiles = {
+            "chryzantemy_main.ogg",
+            "kanikuly_main.ogg",
+            "wolnosc_main.ogg"
+        };
+
+        foreach (string file in musicFiles)
+        {
+            string fullPath = Path.Combine(soundPath, file);
+            if (File.Exists(fullPath))
+            {
+                StartCoroutine(LoadAudioClip(fullPath));
+            }
+            else
+            {
+                Logger.LogWarning($"Plik nie istnieje: {file}");
+            }
+        }
+    }
+
+    private System.Collections.IEnumerator LoadAudioClip(string path)
+    {
+        string url = "file://" + path.Replace("\\", "/");
+        using (WWW www = new WWW(url))
+        {
+            yield return www;
+            if (string.IsNullOrEmpty(www.error))
+            {
+                AudioClip clip = www.GetAudioClip(false, false, AudioType.OGGVORBIS);
+                if (clip != null)
+                {
+                    mainMenuClips.Add(clip);
+                    Logger.LogInfo("Załadowano muzykę: " + Path.GetFileName(path));
+                }
+            }
+            else
+            {
+                Logger.LogError("Błąd ładowania " + path + ": " + www.error);
+            }
+
+            // Po załadowaniu wszystkich – start
+            if (mainMenuClips.Count == 3 && !isReady)
+            {
+                isReady = true;
+                PlayRandomMainMenuMusic();
+            }
+        }
+    }
+
+    private void Update()
+    {
+        if (isReady && currentMusicSource != null && !currentMusicSource.isPlaying)
+        {
+            PlayRandomMainMenuMusic();
+        }
+    }
+
+    private void PlayRandomMainMenuMusic()
+    {
+        if (currentMusicSource == null)
+        {
+            GameObject obj = new GameObject("PolishMainMenuMusic");
+            currentMusicSource = obj.AddComponent<AudioSource>();
+            DontDestroyOnLoad(obj);
+        }
+
+        AudioClip next = mainMenuClips[rng.Next(mainMenuClips.Count)];
+        currentMusicSource.clip = next;
+        currentMusicSource.loop = false;
+        currentMusicSource.Play();
+
+        Logger.LogInfo("▶️ Gra teraz: " + next.name);
+    }
+}
+

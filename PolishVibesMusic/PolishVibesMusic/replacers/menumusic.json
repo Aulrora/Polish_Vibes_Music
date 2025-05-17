@@ -1,0 +1,23 @@
+{
+    "replacements": [
+        {
+            "matches": [
+                "*:msc main menu"
+            ],
+            "sounds": [
+                {
+                    "sound": "chryzantemy_main.ogg",
+                    "weight": 2
+                },
+                {
+                    "sound": "kanikuly_main.ogg",
+                    "weight": 2
+                },
+                {
+                    "sound": "wolnosc_main.ogg",
+                    "weight": 2
+                }
+            ]
+        }
+    ]
+}
