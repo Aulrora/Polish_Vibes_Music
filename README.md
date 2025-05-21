@@ -4,7 +4,7 @@
 
 Mod zawiera ogolnie utwory, ktore w jakis sposob pasuja do klimatu jaki panuje w kontretnej elementach gry, a jednoczesnie nadaje im nutke "polskosci" oraz szeroko pojetej polskiej memologii.
 
-### MENU GLOWNE ZAWIERA PONIZSZE UTWORY
+### MENU GLOWNE ZAWIERA PONIZSZE UTWORY:
 
 ![](https://i.imgur.com/X1SmPz8.jpeg)
 
