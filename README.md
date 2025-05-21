@@ -24,6 +24,6 @@ Mod zawiera ogolnie utwory, ktore w jakis sposob pasuja do klimatu jaki panuje w
 
 ## Losowanie utworow:
 
-Przy kazdym wladowaniu sie lobby czy menu dzieki funkcji **weight  x**  ustawiana jest losowosc z jaka dany utwor zostanie pusczony.
+Przy kazdym wladowaniu sie lobby czy menu dzieki funkcji **weight  x**  sa losowane utwory a weight daje im szanse z jaka dany utwor zostanie pusczony.
 Jezeli chcesz aby utwor odtwarzal sie czesciej zwieksz mu wartosc **weight** (funkcja ta sumuje liczby **x** dajac szanse np x/suma x-ow na puszczenie kontretnego utworu np: weight 2 i weight 3 daje szanse 2/5 dla pierwszego utworu, a drugi ma szanse 3/5 czyli wieksza)
 
