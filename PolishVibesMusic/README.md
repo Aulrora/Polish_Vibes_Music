@@ -1,4 +1,4 @@
-## Credits
+## Podmiana utworow
 
 Aby zmienić utwory na swoje można to zrobić na różny sposób:
 
