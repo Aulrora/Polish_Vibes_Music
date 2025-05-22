@@ -1,0 +1,11 @@
+{
+    "name": "PolishVibesMusic",
+    "version_number": "0.6.9",
+    "website_url": "",
+    "description": "Podmienia cala muzyke na utwory zwiazane z polska kultura i szeroko pojeta memologia",
+    "dependencies": [
+        "BepInEx-BepInExPack-5.4.2100",
+        "loaforc-loaforcsSoundAPI-2.0.5",
+        "loaforc-loaforcsSoundAPI_REPO-1.0.1"
+    ]
+}

@@ -2,18 +2,17 @@
 
 ## Ogolne przedstawienie moda
 
->[!NOTE]
->Mod zawiera ogolnie utwory, ktore w jakis sposob pasuja do klimatu jaki panuje w kontretnej elementach gry, a jednoczesnie nadaje im nutke "polskosci" oraz szeroko pojetej polskiej memologii.
->
+Mod zawiera ogolnie utwory, ktore w jakis sposob pasuja do klimatu jaki panuje w kontretnej elementach gry, a jednoczesnie nadaje im nutke "polskosci" oraz szeroko pojetej polskiej memologii.
+
 ### MENU GLOWNE ZAWIERA PONIZSZE UTWORY:
 
 ![](https://i.imgur.com/X1SmPz8.jpeg)
 
 ![](https://i.imgur.com/3TQ8DSO.jpeg)
 
-![](https://i.imgur.com/jinx35D.jpeg)
+![](https://i.imgur.com/zlUZ9Dl.jpeg)
 
-![](https://i.imgur.com/oiYEDqm.jpeg)
+![](https://i.imgur.com/dK1pJkC.jpeg)
 
 ## Zamiana utworow na wlasne:
 

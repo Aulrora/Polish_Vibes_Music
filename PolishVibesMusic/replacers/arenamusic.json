@@ -1,0 +1,23 @@
+{
+    "replacements": [
+        {
+            "matches": [
+                "*:arena_music_temp",
+            ],
+            "sounds": [
+                {
+                    "sound": "desolate_arena.ogg",
+                    "weight": 2
+                },
+                {
+                    "sound": "kumbejj_arena.ogg",
+                    "weight": 1
+                },
+                {
+                    "sound": "doom_arena.ogg",
+                    "weight": 2
+                }
+            ]
+        }
+    ]
+}
